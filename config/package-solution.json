@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "spfx-tailwind-client-side-solution",
+    "name": "SPFx Tailwind",
     "id": "9c2d370c-9957-4e3f-b322-6b2cbd458c69",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
@@ -35,6 +35,6 @@
     ]
   },
   "paths": {
-    "zippedPackage": "solution/spfx-tailwind.sppkg"
+    "zippedPackage": "solution/SPFx Tailwind.sppkg"
   }
 }
