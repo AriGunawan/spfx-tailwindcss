@@ -13,6 +13,27 @@ build.rig.getTasks = function () {
   return result;
 };
 
+/* tailwind */
+const postcss = require("gulp-postcss");
+const tailwind = require("tailwindcss");
+
+const tailwindcss = build.subTask(
+   "tailwindcss",
+   function (gulp, buildOptions, done) {
+      gulp
+         .src("assets/tailwind.css")
+         .pipe(
+            postcss([
+               tailwind("./tailwind.config.js"),
+            ])
+         )
+         .pipe(gulp.dest("assets/dist"));
+      done();
+   }
+);
+build.rig.addPreBuildTask(tailwindcss);
+/* end of tailwind */
+
 /* fast-serve */
 const { addFastServe } = require("spfx-fast-serve-helpers");
 addFastServe(build);
